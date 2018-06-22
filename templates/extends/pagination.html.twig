@@ -1,0 +1,18 @@
+
+    {% for i in 1..count if i > 0  %}
+
+    {% if topic == null %}
+    <a class="numerator" href="/forum/-{{i}}">{{i}}</a>
+    {% else %}
+    <a class="numerator" href="/forum/{{topic.getId}}-{{i}}">{{i}}</a>
+    {% endif %}
+
+
+    {% endfor %}
+
+    {% if app.session.get("isLogin") and topic != null %}
+
+    <input class="btn" type="button"  onclick="window.location.href='/createSubForum/{{ topic.getId  }}'" value="Napisz nowy temat">
+
+
+    {% endif %}

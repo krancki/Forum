@@ -1,0 +1,38 @@
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
+
+    return re.test(email);
+}
+
+
+
+
+function jsRegistry()
+{
+ var node= document.getElementById("email");
+
+if(!validateEmail( node.value ))
+{
+  node.style.border="red solid 2px";
+}
+else
+{
+  console.log("jestem");
+removeError(node);
+}
+
+
+
+
+}
+
+function setError(node)
+{
+  node.style.border="red solid 2px";
+}
+
+function removeError(node)
+{
+    node.style.border=" rgb(81,81,81) solid 2px";
+
+}

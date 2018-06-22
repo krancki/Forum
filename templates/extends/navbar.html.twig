@@ -1,0 +1,53 @@
+
+
+<div id="mainNavBar">
+  <div id="main-logo">
+    <a href="/"><img src="{{asset("/Logo/logo.png")}}"></a>
+  </div>
+
+  <div id="left-list" >
+    <div class="button">
+    <a href="/forum">Forum</a>
+    </div>
+
+    <div class="button button-right">
+    <a href="/">Menu</a>
+    </div>
+  </div>
+
+  <div id="right-list">
+   {% if app.session.get("isLogin") != null %}
+
+   <div class="button">
+     <span>
+       <a href="/account">Witaj {{app.session.get("name") }}</a>
+     </span>
+   </div>
+
+   <div class="button button-right">
+     <span>
+       <a href="/logout">Wyloguj</a>
+     </span>
+   </div>
+
+
+
+   {% else %}
+    <div class="button">
+      <span>
+        <a href="/login">Loguj</a>
+      </span>
+    </div>
+
+    <div class="button button-right">
+      <span>
+        <a href="/registry">Rejestruj</a>
+      </span>
+    </div>
+    {% endif %}
+
+  </div>
+
+
+</div>
+<div id="row"></div>

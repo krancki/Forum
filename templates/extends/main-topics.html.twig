@@ -1,0 +1,13 @@
+<div id="main-topics">
+  <h2> Wszystkie Tematy</h2>
+
+    {% for topic in topics %}
+      <a href="/forum/{{topic.getId()}}">
+        <div class="topic-div">
+          <h3>  {{topic.getName()}} </h3>
+          <label class="topic-descripction" >{{topic.getDescripction()}} </label>
+        </div>
+      </a>
+    {% endfor %}
+
+</div>

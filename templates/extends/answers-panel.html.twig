@@ -1,0 +1,48 @@
+<div id="answers-panel">
+
+
+<div id="title">
+<h2>{{subtopic}}</h2>
+</div>
+
+<div class="new-answer">
+  {% if app.session.get("isLogin") and subtopicId != null %}
+
+  <input class="btn" type="button"  onclick="window.location.href='/createAnswer/{{subtopicId}}'" value="Odpowiedz">
+
+
+  {% endif %}
+</div>
+
+<div id="answers">
+
+  {% for i in 0..count -1 if count > 0 %}
+
+      <div class="answer">
+        <div class="left-panel"><label>Autor: {{answers[i]["user-nick"]}}</label></div>
+  
+            <label class="date-of-answer"> {{answers[i]["answer-date"]}}</label><br>
+        <div class="right-panel">
+          <p class="user-answer"> {{answers[i]["text"]}}</p>
+        </div>
+
+      </div>
+
+  {% endfor %}
+
+</div>
+
+
+<div class="new-answer">
+  {% if app.session.get("isLogin") and subtopicId != null %}
+
+  <input class="btn" type="button"  onclick="window.location.href='/createAnswer/{{subtopicId}}'" value="Odpowiedz">
+
+
+  {% endif %}
+</div>
+
+
+
+
+</div>

@@ -1,0 +1,6 @@
+{% extends "registry/registry.html.twig" %}
+{% block nick %}  {% if error['NickError'] == true %}<span class="error"> Nazwa zajęta</span> {% endif %} {% endblock %}
+{% block name %}  {% if error['NameError'] == true %}<span class="error"> Podaj Imie</span> {% endif %} {% endblock %}
+{% block secoundname %}  {% if error['SecoundnameError'] == true %}<span class="error"> Podaj Nazwisko</span> {% endif %} {% endblock %}
+{% block email %}  {% if error['EmailError'] == true %}<span class="error"> Błedny email</span> {% endif %} {% endblock %}
+{% block password %}  {% if error['PasswordError'] == true %}<span class="error"> Error</span> {% endif %} {% endblock %}

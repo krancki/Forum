@@ -1,0 +1,42 @@
+
+
+<div id="sub-topics">
+
+  <div id="topic-title">
+    {% if topic == null %}
+    <h2>Wszystkie</h2>
+    {% else %}
+    <h2>{{topic.getName}}</h2>
+    <label>{{topic.getDescripction}}</label>
+    {% endif %}
+  </div>
+  <div class="pagination">
+
+    {% include "extends/pagination.html.twig" %}
+  </div>
+  <div id="sub-topics-list">
+    <table>
+    <thead>
+      <tr>
+        <th>Temat</th>
+        <th>Wyswietlenia</th>
+        <th>Odpowiedzi</th>
+        <th>Ostatni Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for subtopic in subtopics %}
+        <tr class="list-element">
+          <td class="topic"><a href="/subforum/{{subtopic['id'] }}">  <h4>{{subtopic['name'] }}</h4></td>
+          <td class="views"> {{subtopic['visits'] }}  </td>
+          <td class="answers"> {{subtopic['answers'] }}  </td>
+          <td class="last-post">  {{subtopic['date'] }} </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <div class="pagination">
+    {% include "extends/pagination.html.twig" %}
+  </div>
+</div>

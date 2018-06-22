@@ -1,0 +1,26 @@
+
+{% extends "creator/creator.html.twig" %}
+{% block content %}
+<div id="creator-panel">
+
+<div id="title"><h2>Napisz nowy temat w "{{topicName}}"</h2></div>
+
+<div id="create-answer">
+
+    <form action="/createSubForum/{{topicId}}" method="POST">
+        <h3>Temat</h3>
+        <input id="name-field" type="text" name="name-field">
+        <h3>Wiadomość</h3>
+        <textarea id="text-field"  name="text-field"></textarea>
+
+      <input class="btn" type="submit"/>
+
+    </form>
+
+
+</div>
+
+
+</div>
+
+{% endblock %}

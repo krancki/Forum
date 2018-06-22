@@ -1,0 +1,11 @@
+<div id="last-activity">
+  <h2>Ostatnie Posty</h2>
+  <ul class="list">
+    {% for subtopic in lastSubtopics %}
+   <a href="/subforum/{{subtopic.getId()}}">
+   <li class="list-item"> {{subtopic.getName()}}</li>
+    </a>
+
+    {% endfor %}
+  </ul>
+</div>

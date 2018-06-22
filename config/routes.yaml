@@ -1,3 +1,50 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+
+MainPage:
+  path: /
+  controller: App\Controller\MainController::index
+
+LoginPage:
+  path: /login
+  controller: App\Controller\LoginController::index
+
+RegistryPage:
+  path: /registry
+  controller: App\Controller\RegistryController::index
+
+ForumPageAll:
+  path: /forum/-{page}
+  controller: App\Controller\ForumController::showAll
+  defaults:
+      page: 1
+
+ForumPage:
+  path: /forum/{topicSelected}-{page}
+  controller: App\Controller\ForumController::show
+  defaults:
+      page: 1
+
+SubForumPage:
+  path: /subforum/{subforum}
+  controller: App\Controller\AnswersController::show
+  defaults:
+      subforum: 1
+
+Logout:
+  path: /Logout
+  controller: App\Controller\LogoutController::index
+
+AccountPage:
+  path: /Account
+  controller: App\Controller\Account::index
+
+CreatorAnswerPage:
+  path: /createAnswer/{subTopic}
+  controller: App\Controller\CreatorController::answer
+
+
+
+CreatorSubforumPage:
+  path: /createSubForum/{topic}
+  controller: App\Controller\CreatorController::subforum
+  defaults:
+      topic: 1

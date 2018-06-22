@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="{{asset("/css/navbar.css")}}">
+<link rel="stylesheet" type="text/css" href="{{asset("/css/panels/last-posts.css")}}">
+<link rel="stylesheet" type="text/css" href="{{asset("/css/panels/main-posts.css")}}">
+
+</head>
+<body>
+
+{% include "extends/navbar.html.twig" %}
+
+
+
+
+
+
+<div id="contener">
+  {% include "extends/last-activity.html.twig" %}
+  {% include "extends/main-topics.html.twig" %}
+
+</div>
+
+
+
+</body>
+</html>

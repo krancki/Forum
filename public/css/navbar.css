@@ -1,0 +1,110 @@
+body
+{
+  margin:0px;
+  background-color: #f4f4f4;
+  padding-top:70px;
+}
+
+
+#mainNavBar
+{
+  top:0px;
+  background-color: #fff;
+  width:100%;
+  height:50px;
+  display:block;
+  position:fixed;
+  overflow:hidden;
+  margin:0px;
+
+  -webkit-box-shadow: 0px 10px 38px -18px rgba(102,102,103,1);
+  -moz-box-shadow: 0px 10px 38px -18px rgba(102,102,103,1);
+  box-shadow: 0px 10px 38px -18px rgba(102,102,103,1);
+}
+
+#main-logo img
+{
+  height: 100%;
+  margin-left:30px;
+}
+
+#main-logo
+{
+
+  float:left;
+  height:100%;
+  width: 20%;
+}
+
+#left-list
+{
+
+  float:left;
+}
+
+#right-list
+{
+  float:right;
+  margin-right:5%;
+}
+
+#left-list .button
+{
+  border-left: 1px solid #e9e9e9;
+}
+#left-list .button-right
+{
+  border-right: 1px solid #e9e9e9;
+}
+
+.button
+{
+
+
+  float:left;
+  height:50px;
+  width:auto;
+  min-width:70px;
+
+  background-color: #fff;
+}
+
+#left-list .button:hover
+{
+  background-color: #e9e9e9 ;
+
+}
+
+
+.button a
+{
+  height: 100%;
+      color:#666667;
+      text-align: center;
+      line-height: 48px;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: block;
+
+      text-decoration: none;
+      font-size: 20px;
+      font-family: MyriadPro;
+      color: #4A4A49;
+}
+
+#right-list .button a:hover
+{
+  text-decoration: overline;
+  text-decoration-color:#666667;
+
+}
+
+
+#row
+{
+  position:fixed;
+top:50px;
+background-color: #666667;
+height:2px;
+width:100%;
+}

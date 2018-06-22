@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="{{asset("/css/navbar.css")}}">
+<link rel="stylesheet" type="text/css" href="{{asset("/css/registry/registry.css")}}">
+<script type="text/javascript" src="{{asset("/javascript/validators.js")}}"> </script>
+</head>
+<body>
+
+{% include "extends/navbar.html.twig" %}
+
+
+<div id="contener">
+<h2> Rejestruj</h2>
+<label>
+  Witamy i dziękujemy za zainteresowanie rejestracją na YourForum.pl. <br>
+Pola oznaczone gwiazdką (*) są obowiązkowe.
+</label>
+
+    <form action="/registry" method="post">
+
+      <label>*Nazwa użytkownika </label>
+      <input name="nick" class="field" placeholder="Podaj nazwe użytkownika"    type="text">
+      {% block nick %}  {% endblock %}
+
+      <label>Imie</label>
+      <input name="name" class="field" placeholder="Podaj imie"    type="text">
+      {% block name %}  {% endblock %}
+
+      <label>Nazwisko</label>
+      <input name="secoundname" class="field" placeholder="Podaj nazwisko"    type="text">
+      {% block secoundname %}  {% endblock %}
+
+      <label>Adres zamieszkania </label>
+      <input name="address" class="field" placeholder="Adres zamieszkania" type="text">
+
+      <label>*Adres e-mail</label>
+      <input id="email" name="email" class="field" placeholder="Podaj Adres E-mail"    type="text" oninput="jsRegistry()">
+      {% block email %}  {% endblock %}
+
+      <label>*Hasło</label>
+      <input name="password" class="field"  type="password">
+      {% block password %}  {% endblock %}
+
+
+      <label>*Powtórz hasło</label>
+      <input name="rep-password" class="field"  type="password">
+
+
+
+
+      <button name="registry" id="registry" type="submit" >Registry</button>
+    </form>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

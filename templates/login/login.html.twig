@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="{{asset("/css/navbar.css")}}">
+<link rel="stylesheet" type="text/css" href="{{asset("/css/login/login.css")}}">
+
+</head>
+<body>
+
+{% include "extends/navbar.html.twig" %}
+
+
+<div id="contener">
+<h2> Login</h2>
+  <div id="login-form">
+    <form action="/login" method="post">
+      <input name="username" class="field" placeholder="Login"    type="text">
+      <input name="password" class="field" placeholder="Password" type="password">
+      <label id="autologin">
+          <input  name="autologin"  type="checkbox"> Remember me !
+      </label>
+      <button name="login" id="login" type="submit" >Login</button>
+    </form>
+
+  </div>
+
+
+</div>
+
+
+
+</body>
+</html>
